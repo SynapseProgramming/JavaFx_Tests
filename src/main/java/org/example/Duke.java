@@ -39,6 +39,8 @@ public class Duke extends Application {
         scene = new Scene(mainLayout);
 
         //Step 2. Formatting the window to look as expected
+        //Scroll down to the end every time dialogContainer's height changes.
+        dialogContainer.heightProperty().addListener((observable) -> scrollPane.setVvalue(1.0));
         stage.setTitle("Duke");
         stage.setResizable(false);
         stage.setMinHeight(600.0);
